@@ -1,6 +1,6 @@
 # LlamaIndex Readers Integration: TranscriptFetch
 
-Transcripts of YouTube, TikTok and Instagram videos as LlamaIndex Documents, from a single link to whole channels, playlists and searches, via [TranscriptFetch](https://transcriptfetch.com). With `chunks=True` the API splits each transcript into embedding-sized pieces with a link to the moment each one starts, so answers can cite the exact second.
+Transcripts of YouTube, TikTok and Instagram videos as LlamaIndex Documents, from a single link to whole channels, playlists and searches, via [TranscriptFetch](https://transcriptfetch.com/?utm_source=github&utm_medium=integration&utm_campaign=llama-index-readers-transcriptfetch). With `chunks=True` the API splits each transcript into embedding-sized pieces with a link to the moment each one starts, so answers can cite the exact second.
 
 ```bash
 pip install llama-index-readers-transcriptfetch
