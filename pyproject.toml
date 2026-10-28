@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "llama-index-readers-transcriptfetch"
+version = "0.1.0"
+description = "LlamaIndex reader for TranscriptFetch: transcripts of YouTube, TikTok and Instagram videos, whole channels, playlists and searches, chunked for RAG with timestamped citations."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.10"
+authors = [{ name = "TranscriptFetch", email = "support@transcriptfetch.com" }]
+keywords = ["llama-index", "reader", "youtube", "tiktok", "instagram", "transcript", "rag"]
+dependencies = ["llama-index-core>=0.12.0", "transcriptfetch-sdk>=2.5.0"]
+
+[project.optional-dependencies]
+test = ["pytest>=7", "respx>=0.20"]
+
+[project.urls]
+Homepage = "https://transcriptfetch.com"
+Documentation = "https://transcriptfetch.com/docs"
+Source = "https://github.com/TranscriptFetch/llama-index-readers-transcriptfetch"
+
+[tool.hatch.build.targets.wheel]
+packages = ["llama_index"]
+
+[tool.llamahub]
+contains_example = false
+import_path = "llama_index.readers.transcriptfetch"
+
+[tool.llamahub.class_authors]
+TranscriptFetchReader = "TranscriptFetch"
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
